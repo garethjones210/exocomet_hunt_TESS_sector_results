@@ -6,36 +6,36 @@ Output format is a table in text format, designed to be analysed with command li
 
 Columns in table are:
 
-(1) Light curve file name, containing Kepler ID and date.
+*(1) Light curve file name, containing Kepler ID and date.
 
-(2) Transit signal strength, as determined by box fit test statistic.
+*(2) Transit signal strength, as determined by box fit test statistic.
 
-(3) Signal to noise of the detection.
+*(3) Signal to noise of the detection.
 
-(4) Kepler date of the detected event.
+*(4) Kepler date of the detected event.
 
-(5) Asymmetry of the event.
+*(5) Asymmetry of the event.
 
-The next two columns are parameters from the asymmetric comet curve fit:
+*The next two columns are parameters from the asymmetric comet curve fit:
 
-(6) Transit entry scale length.
+*(6) Transit entry scale length.
 
-(7) Transit exit scale length.
+*(7) Transit exit scale length.
 
-Two columns of box fit parameters:
+*Two columns of box fit parameters:
 
-(8) Box width, giving estimate for transit width.
+*(8) Box width, giving estimate for transit width.
 
-(9) Box depth, giving estimate for transit depth.
+*(9) Box depth, giving estimate for transit depth.
 
-Finally, (10) performs some very basic classification of events, to remove common artefacts. There are four possible values here:
+*Finally, (10) performs some very basic classification of events, to remove common artefacts. There are four possible values here:
 
-  point - Event is 1-2 data points wide, probably an error (e.g. cosmic ray), and too short for meaningful shape analysis.
+  *point - Event is 1-2 data points wide, probably an error (e.g. cosmic ray), and too short for meaningful shape analysis.
 
-  end - Event occurs at the end of a light curve. This is typically due to small errors in removing periodic signals in some very variable light curves, such as those from red giant stars.
+  *end - Event occurs at the end of a light curve. This is typically due to small errors in removing periodic signals in some very variable light curves, such as those from red giant stars.
 
-  artefact - Event occurs directly after segment of missing data. These may be artefacts from PDC fitting, so analysis of raw flux is required to categorise these events.
+  *artefact - Event occurs directly after segment of missing data. These may be artefacts from PDC fitting, so analysis of raw flux is required to categorise these events.
 
-  maybeTransit - Event not ruled out as transit by any of the above filters.
+  *maybeTransit - Event not ruled out as transit by any of the above filters.
 
 Also included is an example awk script for filtering.
